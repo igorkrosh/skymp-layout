@@ -1,1 +1,1 @@
-//global.$ = require('jquery');
+global.$ = require('jquery');

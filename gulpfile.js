@@ -16,7 +16,7 @@ let path = {
         pug: `${sourceFolder}/*.pug`,
         css: [`${sourceFolder}/scss/style.scss`, `${sourceFolder}/scss/bundle.scss`],
         js: [`${sourceFolder}/js/index.js`],
-        img: `${sourceFolder}/images/**/*.{jpg, png, svg, gif, ico, webp}`,
+        img: `${sourceFolder}/images/**/*.+(png|jpg|gif|ico|svg|webp)`,
         fonts: `${sourceFolder}/fonts/*.ttf`
     },
     watch: {
@@ -24,7 +24,7 @@ let path = {
         pug: `${sourceFolder}/**/*.pug`,
         css: `${sourceFolder}/scss/**/*.scss`,
         js: `${sourceFolder}/js/**/*.js`,
-        img: `${sourceFolder}/images/**/*.{jpg, png, svg, gif, ico, webp}`,
+        img: `${sourceFolder}/images/**/*.+(png|jpg|gif|ico|svg|webp)`,
     },
     clean: `./${projectFolder}/`
 }
@@ -160,6 +160,7 @@ function CSS()
             })
         )
         .pipe(dest(path.build.css))
+        .pipe(browsersync.stream())
         .pipe(cleanCss())
         .pipe(
             rename({
@@ -167,7 +168,6 @@ function CSS()
             })
         )
         .pipe(dest(path.build.css))
-        .pipe(browsersync.stream());
 }
 
 function JS()
