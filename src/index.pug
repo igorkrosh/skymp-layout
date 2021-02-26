@@ -14,16 +14,46 @@ html(lang="ru")
                 img.second__layer(src="assets/images/bg/e6db1c3.png")
                 img.third__layer(src="assets/images/bg/928cdc4.png")
             .container 
-                .col-text
+                .col__text
                     h1 The Elder Scrolls V: Skyrim
                         b теперь OnLine
-                    a(href="#").btn-skymp Скачать лаунчер
+                    a(href="#").btn__skymp Скачать лаунчер
                 .col-btn
-                    button.btn-play
-        section.skymp-desc
+                    button.btn__play
+        section.skymp__desc
             .container
                 p 
                     |The Elder Scrolls V: Skyrim - ролевая компьютерная игра с открытым миром, разработанная студией Bethesda Game Studios - обрела многопользовательский режим благодаря проекту SkyMP.
                 p
                     |SkyMP - это глобальный проект, позволяющий многим людям одновременно окунуться в атмосферу мира древних свитков.
+        section.news
+            .container
+                h1.title Новости
+                .news__wrapper
+                    a(href="#").news.last
+                        img(src="assets/images/news/cef94a52513993.59133b4182ff8.jpg", alt="").bg
+                        .date 30.01.2019
+                        .news__title Старт ОБТ
+                        .news__desc 
+                            |Для участия в нём вам потребуется пройти инструкцию
+                            |опубликованную в данном посте.                         
+                    .col-news
+                        a(href="#").news
+                            .bg__wrapper
+                                img(src="assets/images/news/883a3059660045.5a2a33e031e52.jpg", alt="").bg
+                            .date 30.01.2019
+                            .news__title Открытая Бета продолжается
+                            .news__desc 
+                                |Cегодня на сервере зарегистрирован рекорд онлайна - 1061 человек.
+                                |Сервер работал стабильно                        
+                        a(href="#").news
+                            .bg__wrapper
+                                img(src="assets/images/news/servers.jpg", alt="").bg
+                            .date 30.01.2019
+                            .news__title Обновлённый сервер
+                            .news__desc 
+                                |Буквально час назад у нас произошла неприятная ситуация:
+                                |из-за нагрузки в ~20 тысяч...      
+                .btn__wrapper
+                    a(href="#").btn__skymp Все новости
         include pug/scripts.pug

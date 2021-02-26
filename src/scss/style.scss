@@ -4,7 +4,6 @@ body
     font-family: "TrajanPro3";
     color: #fff;
     background: #000;
-    height: 5000px;
 }
 
 *, ::after, ::before 
@@ -27,21 +26,17 @@ a
     margin-right: auto;
 }
 
-.btn-skymp
+.btn__skymp
 {
     padding: 20px 40px 16px 40px;
     color: #fff;
     text-transform: uppercase;
     font-size: 24px;
-    
+    display: inline-block;
     position: relative;
-    span
-    {
-        margin-bottom: -2px;
-    }
 }
 
-.btn-skymp:before
+.btn__skymp:before
 {
     content: '';
     position: absolute;
@@ -56,9 +51,20 @@ a
     transition: 0.5s;
 }
 
-.btn-skymp:hover:before
+.btn__skymp:hover:before
 {
     filter: contrast(150%);
+}
+
+.title
+{
+    font-size: 52px;
+    font-weight: 400;
+}
+
+section
+{
+    padding-top: 80px;
 }
 
 .navbar 
@@ -75,6 +81,8 @@ a
         justify-content: space-between;
         align-items: center;
         padding: 15px;
+        position: relative;
+        z-index: 20;
     }
 }
 
@@ -133,11 +141,12 @@ a
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 10;
     width: 100%;
     overflow: hidden;
     height: 200px;
     background-repeat: repeat;
+    pointer-events: none;
 }
 
 .bg__clouds.main
@@ -191,7 +200,7 @@ section.first__scroll
         display: flex;
         margin-top: 100px;
     }
-    .col-text 
+    .col__text 
     {
         h1 
         {
@@ -213,7 +222,7 @@ section.first__scroll
         margin-right: auto;
         display: flex;
         align-items: center;
-        .btn-play
+        .btn__play
         {
             width: 128px;
             height: 128px;
@@ -225,7 +234,7 @@ section.first__scroll
             transition: 0.5s;
             cursor: pointer;
         }
-        .btn-play:before
+        .btn__play:before
         {
             content: url(../images/icons/play.png);
             position: absolute;
@@ -233,14 +242,14 @@ section.first__scroll
             left: 50%;
             transform: translate(-35%, -50%);
         }
-        .btn-play:hover
+        .btn__play:hover
         {
             background-color: rgba(0, 0, 0, 0.8);
         }
     }
 }
 
-section.skymp-desc
+section.skymp__desc
 {
     padding-top: 160px;
 
@@ -249,5 +258,112 @@ section.skymp-desc
         font-size: 22px;
         text-align: center;
         margin-bottom: 80px;
+    }
+}
+
+section.news
+{
+    .news__wrapper
+    {
+        display: flex;
+
+        .news.last
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px 20px;
+            overflow: hidden;
+            .bg
+            {
+                position: absolute;
+                z-index: -1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+
+                object-fit: cover;
+                max-height: none;
+                transition: 0.3s;
+            }
+            .news__title
+            {
+                text-decoration: underline;
+                font-weight: 800;
+            }
+            .news__desc
+            {
+                text-decoration: underline;
+            }
+        }
+        .news.last:hover .bg
+        {
+            width: 110%;
+            height: 110%;
+        }
+        .news
+        {
+            position: relative;
+            margin: 15px;
+            display: block;
+            .bg
+            {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                transition: 0.3s;
+            }
+            .bg__wrapper
+            {
+                width: 100%;
+                max-height: 230px;
+                overflow: hidden;
+                display: flex;
+            }
+            .date
+            {
+                position: absolute;
+                top: 15px;
+                left: 0;
+                background-color: #134467;
+                padding: 8px 10px 3px 40px;
+                display: flex;
+                align-items: center;
+            }
+            .date:before
+            {
+                content: url(../images/icons/clock.png);
+                width: 21px;
+                height: 21px;
+                position: absolute;
+                left: 10px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }   
+            .news__title
+            {
+                font-size: 18px;
+                margin: 10px 0;
+            } 
+            .news__desc
+            {
+                font-size: 14px;
+                color: #babcbd;
+            }        
+        }
+        .col-news .news:hover .bg
+        {
+            transform: scale(1.05);
+        }
+    }
+
+    .btn__wrapper
+    {
+        text-align: center;
+        margin-top: 40px;
     }
 }
