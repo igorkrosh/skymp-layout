@@ -367,3 +367,85 @@ section.news
         margin-top: 40px;
     }
 }
+
+section.opportunities
+{
+    .opportunities__wrapper
+    {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: space-between;
+        .opportunities__item
+        {
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+            width: 328px;
+            height: 550px;
+            .bg
+            {
+                position: absolute;
+                bottom: 0;
+                z-index: -1;
+            }
+            .text
+            {
+                padding: 25px;
+                position: relative;
+                .item__title
+                {
+                    font-size: 22px;
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+                }
+                .item__desc
+                {
+                    transition: 0.8s;
+                    max-height: 0;
+                    overflow: hidden;
+                }
+            }
+            .text:after
+            {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url(../images/bg/redstone.jpg);
+                background-size: cover;
+                z-index: -1;
+                transition: 0.5s;
+                opacity: 0;
+            }
+        }
+        .opportunities__item:hover
+        {
+            .text:after
+            {
+                opacity: 1;
+            }
+            .item__desc
+            {
+                max-height: 550px;
+            }
+        }
+        .opportunities__item:nth-child(2)
+        {
+            .bg
+            {
+                left: -34px;
+            }
+        }
+        .opportunities__item:nth-child(3)
+        {
+            .bg
+            {
+                left: -31px;
+            }
+        }
+    }
+}
