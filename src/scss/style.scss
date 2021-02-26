@@ -75,7 +75,7 @@ section
 .navbar 
 {
     color: #000;
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: 0;
     z-index: 100;
@@ -202,7 +202,7 @@ section.first__scroll
         background: linear-gradient(to top, #000, transparent);
         z-index: 10;
     }
-    .container
+    .container.row
     {
         color: #000;
         display: flex;
