@@ -9,6 +9,15 @@ html(lang="ru")
     body
         include pug/navbar.pug
         section.first__scroll
+            .bg__scene
+                img.first__layer(src="assets/images/bg/8c45337.jpg")
+                img.second__layer(src="assets/images/bg/e6db1c3.png")
+                img.third__layer(src="assets/images/bg/928cdc4.png")
             .container 
-                |asd
+                .col-text
+                    h1 The Elder Scrolls V: Skyrim
+                        b теперь OnLine
+                    a(href="#").btn-skymp Скачать лаунчер
+                .col-btn
+                    button.btn-play
         include pug/scripts.pug

@@ -4,6 +4,7 @@ body
     font-family: "TrajanPro3";
     color: #fff;
     background: #000;
+    height: 5000px;
 }
 
 *, ::after, ::before 
@@ -26,12 +27,47 @@ a
     margin-right: auto;
 }
 
+.btn-skymp
+{
+    padding: 20px 40px 16px 40px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+    
+    position: relative;
+    span
+    {
+        margin-bottom: -2px;
+    }
+}
+
+.btn-skymp:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg/btn_skymp.jpg) no-repeat;
+    background-size: cover;
+    z-index: -1;
+    
+    transition: 0.5s;
+}
+
+.btn-skymp:hover:before
+{
+    filter: contrast(150%);
+}
+
 .navbar 
 {
     color: #000;
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 100;
 
     .container
     {
@@ -101,7 +137,6 @@ a
     width: 100%;
     overflow: hidden;
     height: 200px;
-    
     background-repeat: repeat;
 }
 
@@ -118,5 +153,89 @@ a
 section.first__scroll
 {
     padding-top: 140px;
-    
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    .bg__scene
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        img
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+    }
+    .bg__scene:before
+    {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to top, #000, transparent);
+        z-index: 10;
+    }
+    .container
+    {
+        color: #000;
+        display: flex;
+        margin-top: 100px;
+    }
+    .col-text 
+    {
+        h1 
+        {
+            font-weight: 400;
+            font-size: 40px;
+            margin-bottom: 80px;
+
+            b
+            {
+                display: block;
+                color: #134467;
+                font-size: 66px;
+            }
+        }
+    }
+    .col-btn
+    {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        .btn-play
+        {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            border: 3px solid #babcbd;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+            position: relative;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        .btn-play:before
+        {
+            content: url(../images/icons/play.png);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-35%, -50%);
+        }
+        .btn-play:hover
+        {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    }
 }
