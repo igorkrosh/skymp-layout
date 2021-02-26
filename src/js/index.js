@@ -3,7 +3,8 @@ $(document).ready(Core);
 function Core()
 {
     Animate();
-    SetSkyrimBg()
+    SetSkyrimBg();
+    SetCardSwitcher();
 }
 
 function Animate() // Фукнция отрисовки анимации на сцене 
@@ -33,5 +34,38 @@ function SetSkyrimBg()
         firstLayer.css('top', `${value * 0.5}px`);
         secondLayer.css('top', `${value * 0.3}px`);
         thirdLayer.css('top', `${value * 0.1}px`);
+    })
+}
+
+function SetCardSwitcher()
+{
+    $('.btn__card__switch').on('click', function(e) {
+        e.preventDefault();
+        if ($(this).hasClass('active'))
+        {
+            return;
+        }
+
+        $('.btn__card__switch').removeClass('active');
+        $(this).addClass('active');
+
+        let targetCard = $(this).attr('target');
+
+        SwitchCard(targetCard)
+    })
+}
+
+function SwitchCard(target)
+{
+    $('.card.active').animate({
+        opacity: 0
+    }, 500, function() {
+        $('.card.active').removeClass('active');
+
+        $(`[card-name="${target}"]`).css('opacity', 0);
+        $(`[card-name="${target}"]`).addClass('active');
+        $(`[card-name="${target}"]`).animate({
+            opacity: 1
+        }, 500)
     })
 }

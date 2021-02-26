@@ -78,5 +78,101 @@ html(lang="ru")
                         .text
                             .item__title Экономические отношения
                             .item__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, eveniet!
-        section.
+        section.fractions
+            .container
+                h1.title Вступайте во фракции
+                .fractions__wrapper
+                    .btn__wrapper
+                        button.btn__card__switch.active(target="empire")
+                        button.btn__card__switch(target="brothers")
+                        button.btn__card__switch(target="thieves")
+                        button.btn__card__switch(target="dark_brotherhood")
+                        button.btn__card__switch(target="magic")
+                        button.btn__card__switch(target="city")
+                        button.btn__card__switch(target="warriors")
+                        button.btn__card__switch(target="vampies")
+                        button.btn__card__switch(target="blades")
+                    .card__viewer
+                        .card.active(card-name="empire")
+                            .text
+                                h1 Имперский легион                            
+                                p 
+                                    |Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quas provident necessitatibus tenetur error cumque eveniet est totam pariatur |rerum dolore natus quaerat quis numquam, temporibus velit ducimus quae perspiciatis, praesentium dignissimos quasi ab veritatis. Nam at natus beatae
+                                    |fuga.
+                                a(href="#").btn__skymp Начать играть
+                            .fraction__image
+                                img(src="assets/images/fraction/имперец.png", alt="")
+                        .card(card-name="brothers")
+                            .text
+                                h1 Братья Бури                 
+                                p 
+                                    |Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quas provident necessitatibus tenetur error cumque eveniet est totam pariatur |rerum dolore natus quaerat quis numquam, temporibus velit ducimus quae perspiciatis, praesentium dignissimos quasi ab veritatis. Nam at natus beatae
+                                    |fuga.
+                                a(href="#").btn__skymp Начать играть
+                            .fraction__image
+                                img(src="assets/images/fraction/Буря.png", alt="")
+                        .card(card-name="thieves")
+                            .text
+                                h1 Гильдия воров      
+                                p 
+                                    |Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quas provident necessitatibus tenetur error cumque eveniet est totam pariatur |rerum dolore natus quaerat quis numquam, temporibus velit ducimus quae perspiciatis, praesentium dignissimos quasi ab veritatis. Nam at natus beatae
+                                    |fuga.
+                                a(href="#").btn__skymp Начать играть
+                            .fraction__image
+                                img(src="assets/images/fraction/гильдия воров.png", alt="")
+                        .card(card-name="dark_brotherhood")
+                            .text
+                                h1 Темное братство    
+                                p 
+                                    |Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quas provident necessitatibus tenetur error cumque eveniet est totam pariatur |rerum dolore natus quaerat quis numquam, temporibus velit ducimus quae perspiciatis, praesentium dignissimos quasi ab veritatis. Nam at natus beatae
+                                    |fuga.
+                                a(href="#").btn__skymp Начать играть
+                            .fraction__image
+                                img(src="assets/images/fraction/тёмное братство.png", alt="")
+                        .card(card-name="magic")
+                            .text
+                                h1 Lorem
+                                p
+                                    |Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quas provident necessitatibus tenetur error cumque eveniet est totam pariatur |rerum dolore natus quaerat quis numquam, temporibus velit ducimus quae perspiciatis, praesentium dignissimos quasi ab veritatis. Nam at natus beatae
+                                    |fuga.
+                                a(href="#").btn__skymp Начать играть
+                            .fraction__image
+                                img(src="assets/images/fraction/тёмное братство.png", alt="")
+                        .card(card-name="city")
+                            .text
+                                h1 Lorem
+                                p 
+                                    |Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quas provident necessitatibus tenetur error cumque eveniet est totam pariatur |rerum dolore natus quaerat quis numquam, temporibus velit ducimus quae perspiciatis, praesentium dignissimos quasi ab veritatis. Nam at natus beatae
+                                    |fuga.
+                                a(href="#").btn__skymp Начать играть
+                            .fraction__image
+                                img(src="assets/images/fraction/тёмное братство.png", alt="")
+                        .card(card-name="warriors")
+                            .text
+                                h1 Соратники    
+                                p 
+                                    |Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quas provident necessitatibus tenetur error cumque eveniet est totam pariatur |rerum dolore natus quaerat quis numquam, temporibus velit ducimus quae perspiciatis, praesentium dignissimos quasi ab veritatis. Nam at natus beatae
+                                    |fuga.
+                                a(href="#").btn__skymp Начать играть
+                            .fraction__image
+                                img(src="assets/images/fraction/соратники.png", alt="")
+                        .card(card-name="vampies")
+                            .text
+                                h1 Lorem
+                                p 
+                                    |Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quas provident necessitatibus tenetur error cumque eveniet est totam pariatur |rerum dolore natus quaerat quis numquam, temporibus velit ducimus quae perspiciatis, praesentium dignissimos quasi ab veritatis. Nam at natus beatae
+                                    |fuga.
+                                a(href="#").btn__skymp Начать играть
+                            .fraction__image
+                                img(src="assets/images/fraction/тёмное братство.png", alt="")
+                        .card(card-name="blades")
+                            .text
+                                h1 Lorem
+                                p 
+                                    |Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quas provident necessitatibus tenetur error cumque eveniet est totam pariatur |rerum dolore natus quaerat quis numquam, temporibus velit ducimus quae perspiciatis, praesentium dignissimos quasi ab veritatis. Nam at natus beatae
+                                    |fuga.
+                                a(href="#").btn__skymp Начать играть
+                            .fraction__image
+                                img(src="assets/images/fraction/тёмное братство.png", alt="")
         include pug/scripts.pug
+        include pug/footer.pug

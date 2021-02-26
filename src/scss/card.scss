@@ -1,0 +1,11 @@
+.card__viewer 
+{
+    position: relative;
+
+    .card:not(.active)
+    {
+        position: absolute;
+        top: 0;
+        display: none;
+    }
+}
