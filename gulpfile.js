@@ -55,6 +55,10 @@ gulp.task('bundle', function() {
     .pipe(dest(path.build.js));
 });
 
+gulp.task('build', function() {
+    return gulp.series(Clean, BundleJS, gulp.parallel(JS, CSS, HTML, PUG, IMG, FONTS), FontsStyle);
+});
+
 function FontsStyle(cb) {
     let fileContent = fs.readFileSync(sourceFolder + '/scss/fonts.scss');
     if (fileContent == '') 
@@ -196,6 +200,7 @@ function FONTS()
 }
 
 let build = gulp.series(Clean, BundleJS, gulp.parallel(JS, CSS, HTML, PUG, IMG, FONTS), FontsStyle);
+
 let watch = gulp.parallel(build, WatchFiles, BrowserSync);
 
 exports.bundleJs = BundleJS;
