@@ -10,15 +10,15 @@ function Core()
 function Animate() // Фукнция отрисовки анимации на сцене 
 {
     requestAnimationFrame(Animate);
-
+    
     let mainX = $('.bg__clouds.main').css('background-position-x');
     mainX = parseFloat(mainX);
-    mainX += 0.2;
+    mainX += 0.2 * $(window).width() / 1920;
     $('.bg__clouds.main').css('background-position-x', `${mainX}%`)
 
     let secondX = $('.bg__clouds.second').css('background-position-x');
     secondX = parseFloat(secondX);
-    secondX += 0.1;
+    secondX += 0.1  * $(window).width() / 1920;
     $('.bg__clouds.second').css('background-position-x', `${secondX}%`)
 }
 
