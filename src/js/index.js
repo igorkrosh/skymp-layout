@@ -57,6 +57,7 @@ function SetCardSwitcher()
 
 function SwitchCard(target)
 {
+    
     $('.card.active').animate({
         opacity: 0
     }, 500, function() {
@@ -64,6 +65,10 @@ function SwitchCard(target)
 
         $(`[card-name="${target}"]`).css('opacity', 0);
         $(`[card-name="${target}"]`).addClass('active');
+        
+        let cardHeight = $(`[card-name="${target}"]`)[0].clientHeight;
+        $(`[card-name="${target}"]`).closest('.card__viewer').css('height', `${cardHeight}px`)
+
         $(`[card-name="${target}"]`).animate({
             opacity: 1
         }, 500)

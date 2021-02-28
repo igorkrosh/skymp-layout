@@ -476,12 +476,13 @@ section.opportunities:before
 {
     .btn__card__switch[target="#{$fractionId}"]
     {
-        background: url(../images/icons/#{$fractionId}.png);
+        background: url(../images/icons/#{$fractionId}_hover.png);
+        filter: grayscale(1);
     }
 
     .btn__card__switch[target="#{$fractionId}"]:hover, .btn__card__switch.active[target="#{$fractionId}"]
     {
-        background: url(../images/icons/#{$fractionId}_hover.png);
+        filter: grayscale(0);
     }
 }
 
@@ -519,7 +520,7 @@ section.fractions
         .card__viewer
         {
             margin-top: 20px;
-
+            transition: 0.5s;
             .card.active
             {
                 display: flex;
