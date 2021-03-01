@@ -1,0 +1,351 @@
+@media(max-width: 1200px)
+{
+    .container
+    {
+        max-width: 1024px;
+    }
+
+    section.first__scroll .col__text h1
+    {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    section.opportunities .opportunities__wrapper
+    {
+        .opportunities__item:nth-child(1) .bg
+        {
+            width: 316px;
+        }
+
+        .opportunities__item:nth-child(2) .bg
+        {
+            width: 330px;
+            left: -31px;
+        }
+
+        .opportunities__item:nth-child(3) .bg
+        {
+            width: 343px;
+            left: -28px;
+        }
+
+        .opportunities__item
+        {
+            width: 300px;
+        }
+    }
+
+    section.fractions .fractions__wrapper .card__viewer .card .fraction__image img
+    {
+        max-width: 500px;
+    }
+}
+
+@media(max-width: 1024px)
+{
+    .container
+    {
+        max-width: 996px;
+    }
+
+    .logo img
+    {
+        width: 70px;
+    }
+
+    .menu .menu__link
+    {
+        font-size: 18px;
+    }
+
+    section.first__scroll .container .btn__wrapper
+    {
+        text-align: center;
+    }
+}
+
+@media(max-width: 996px)
+{
+    .container
+    {
+        max-width: 768px;
+    }
+
+    .btn__menu
+    {
+        display: block;
+    }
+
+    header .menu
+    {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        opacity: 0;
+        pointer-events: none;
+
+        .bg__clouds
+        {
+            background-repeat: repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .bg__clouds.main
+        {
+            background: url(../images/bg/clouds_menu_main.png);
+        }
+
+        .bg__clouds.second
+        {
+            background: url(../images/bg/clouds_menu_second.png);
+        }
+
+        .menu__link
+        {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+    }
+
+    header .menu.active
+    {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    section.news .news__wrapper
+    {
+        flex-direction: column;
+        
+        .news.last
+        {
+            min-height: 400px;
+        }
+    }
+
+    section.opportunities .opportunities__wrapper
+    {
+        flex-wrap: wrap;
+    justify-content: space-around;
+    }
+
+    section.fractions .fractions__wrapper 
+    {
+        .card__viewer .card .fraction__image img
+        {
+            max-width: 300px;
+        }
+
+        .btn__wrapper
+        {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .btn__card__switch
+            {
+                margin: 15px;
+            }
+        }
+    }
+    
+    section.first__scroll .col__text
+    {
+        h1
+        {
+            font-size: 34px;
+
+            b
+            {
+                font-size: 50px;
+            }
+        }        
+    } 
+
+    footer .container
+    {
+        flex-direction: column;
+
+        .menu
+        {
+            margin: 20px 0;
+
+            .menu__link
+            {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media(max-width: 768px)
+{
+    .container
+    {
+        max-width: 576px;
+    }
+
+    section.first__scroll .bg__scene img
+    {
+        object-position: 70%;
+    }
+
+    section.first__scroll .col__text
+    {
+        h1
+        {
+            font-size: 26px;
+
+            b
+            {
+                font-size: 38px;
+            }
+        }
+    }   
+    
+    section.fractions .fractions__wrapper .btn__wrapper .btn__card__switch
+    {
+        margin: 5px;
+    }
+
+    section.fractions .fractions__wrapper .card__viewer .card
+    {
+        flex-direction: column-reverse;
+
+        .text
+        {
+            text-align: center;
+            padding-right: 0;
+        }
+    }
+
+    footer .container .menu
+    {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+
+        .menu__link
+        {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+    }
+}
+
+@media(max-width: 576px)
+{
+    .container
+    {
+        max-width: 320px;
+    }
+
+    .title
+    {
+        font-size: 28px;
+    }
+
+    section.first__scroll 
+    {
+        .container.row
+        {
+            flex-direction: column;
+            margin-top: 40px;
+
+            .btn__wrapper
+            {
+                margin-bottom: 25px;
+            }
+        }
+
+        .col__text
+        {
+            h1
+            {
+                font-size: 26px;
+                text-align: center;
+
+                b 
+                {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+
+    .btn__skymp
+    {
+        font-size: 20px;
+    }
+
+    section.skymp__desc p
+    {
+        font-size: 19px;
+    }
+
+    section
+    {
+        padding-top: 30px;
+    }
+
+    section.news .news__wrapper .news.last
+    {
+        min-height: 280px;
+    }
+
+    section.opportunities .opportunities__wrapper 
+    {
+        margin-top: 0;
+        .opportunities__item:nth-child(1) .bg
+        {
+            width: 273px;
+            left: 1px;
+        }
+
+        .opportunities__item:nth-child(2) .bg
+        {
+            width: 287px;
+            left: -27px;
+        }
+
+        .opportunities__item:nth-child(3) .bg
+        {
+            width: 298px;
+            left: -24px;
+        }
+
+        .opportunities__item
+        {
+            width: 260px;
+
+            .text .item__title
+            {
+                font-size: 16px;
+                text-decoration: none;
+            }
+        }
+
+        
+
+    }
+
+    section.copyright .container
+    {
+        flex-direction: column;
+        align-items: center;
+        span.copyright
+        {
+            margin-bottom: 20px;
+        }
+    }
+}

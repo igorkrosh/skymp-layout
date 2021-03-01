@@ -1,7 +1,7 @@
 .card__viewer 
 {
     position: relative;
-
+    transition: 0.5s;
     .card:not(.active)
     {
         position: absolute;

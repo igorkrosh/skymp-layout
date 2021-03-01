@@ -5,6 +5,7 @@ function Core()
     Animate();
     SetSkyrimBg();
     SetCardSwitcher();
+    SetMobileMenu();
 }
 
 function Animate() // Фукнция отрисовки анимации на сцене 
@@ -73,4 +74,53 @@ function SwitchCard(target)
             opacity: 1
         }, 500)
     })
+}
+
+function SetMobileMenu()
+{
+    $('.btn__menu').on('click', function() {
+        if ($(this).hasClass('active'))
+        {
+            $(this).removeClass('active');
+            $('header .menu').removeClass('active');
+            $('body').removeClass('lock')
+        }
+        else
+        {
+            $(this).addClass('active');
+            $('header .menu').addClass('active');
+            $('body').addClass('lock')
+        }
+    })
+
+    if ($(window).width() < 996)
+    {
+        SetMenuClouds();
+    }
+
+    $(window).on('resize', function() {
+        if ($(window).width() <= 996)
+        {
+            SetMenuClouds();
+        }
+        else
+        {
+            UnsetMenuClouds();
+        }
+    })
+}
+
+function SetMenuClouds()
+{
+    if ($('header .menu .bg__clouds').length === 0)
+    {
+        console.log('asd')
+        $('header .menu').append('<div class="bg__clouds main"></div>');
+        $('header .menu').append('<div class="bg__clouds second"></div>');
+    }
+}
+
+function UnsetMenuClouds()
+{
+    $('header .menu .bg__clouds').remove();
 }

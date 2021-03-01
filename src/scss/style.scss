@@ -6,6 +6,11 @@ body
     background: #000;
 }
 
+body.lock
+{
+    overflow: hidden;
+}
+
 *, ::after, ::before 
 {
     box-sizing: border-box;
@@ -171,6 +176,7 @@ section.first__scroll
 {
     padding-top: 140px;
     height: 100vh;
+    min-height: 650px;
     position: relative;
     overflow: hidden;
     .bg__scene
@@ -520,12 +526,16 @@ section.fractions
         .card__viewer
         {
             margin-top: 20px;
-            transition: 0.5s;
             .card.active
             {
                 display: flex;
                 align-items: center;
 
+                
+
+            }
+            .card
+            {
                 .text
                 {
                     padding-right: 50px;
@@ -543,7 +553,6 @@ section.fractions
                         margin-top: 40px;
                     }
                 }
-
             }
         }
     }
@@ -585,3 +594,66 @@ section.copyright
         }
     }
 }
+
+.btn__menu
+{
+    width: 40px;
+    height: 40px;
+    border: none;
+    position: relative;
+    transition: 0.5s;
+    background: none;
+    display: none;
+}
+
+.btn__menu:before, .btn__menu:after, .btn__menu span
+{
+    height: 2px;
+    position: absolute;
+    background: #000;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.btn__menu span
+{
+    width: 65%;    
+}
+
+.btn__menu:before
+{
+    content: "";
+    width: 50%;
+    transform: translate(-50%, -6px);
+}
+
+.btn__menu:after
+{
+    content: "";
+    width: 50%;
+    transform: translate(-50%, 6px);
+}
+
+.btn__menu:hover:after, .btn__menu:hover:before, .btn__menu:hover span
+{
+    width: 65%;
+}
+
+.btn__menu.active span
+{
+    opacity: 0; 
+}
+
+.btn__menu.active:after
+{
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.btn__menu.active:before
+{
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+@import 'responce';
