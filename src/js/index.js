@@ -6,6 +6,7 @@ function Core()
     SetSkyrimBg();
     SetCardSwitcher();
     SetMobileMenu();
+    InitOwlCarousel();
 }
 
 function Animate() // Фукнция отрисовки анимации на сцене 
@@ -123,4 +124,37 @@ function SetMenuClouds()
 function UnsetMenuClouds()
 {
     $('header .menu .bg__clouds').remove();
+}
+
+function InitOwlCarousel()
+{
+    $('.btn__wrapper.owl-carousel').owlCarousel({
+        items: 9,
+        dots: false,
+        responsive: {
+            1024: {
+                items: 9
+            },
+            768: {
+                items: 5,
+                nav: true,
+            },
+            578: {
+                items: 3,
+                nav: true
+            },
+            0: {
+                items: 1,
+                nav: true,
+                onChanged: function (event) {
+                    if (event.item.index === null)
+                        return;
+
+                    $('.fractions .btn__card__switch').removeClass('active')
+                    let target = $($('.fractions .btn__card__switch')[event.item.index]).addClass('active').attr('target');
+                    SwitchCard(target);
+                }
+            }
+        }
+    })
 }

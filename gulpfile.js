@@ -91,7 +91,7 @@ function BundleJS(cb)
         .bundle()
         .pipe(source('bundle.js'))
         .pipe(vinylBuffer())
-        .pipe(uglifyEs())
+        //.pipe(uglifyEs())
         .pipe(
             rename({
                 extname: '.min.js'
