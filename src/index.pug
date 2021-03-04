@@ -9,6 +9,7 @@ html(lang="ru")
     body
         section.first__scroll
             include pug/navbar.pug
+            +Navbar(true)
             .bg__scene
                 img.first__layer(src="assets/images/bg/8c45337.jpg")
                 img.second__layer(src="assets/images/bg/e6db1c3.png")
@@ -180,5 +181,5 @@ html(lang="ru")
                                 a(href="#").btn__skymp Начать играть
                             .fraction__image
                                 img(src="assets/images/fraction/тёмное братство.png", alt="")
-        include pug/scripts.pug
         include pug/footer.pug
+        include pug/scripts.pug

@@ -1,0 +1,99 @@
+include pug/navbar.pug
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title SkyMP - Новости
+        include pug/head.pug
+    body
+        section.pagetitle
+            +Navbar(false, 'white')
+            .container
+                ul.breadcrumds
+                    li 
+                        a(href="#") Главная 
+                    li 
+                        a(href="#") Новости 
+                h1 Новости
+                h2 Последние анонсы и нововведения проекта
+        section.news.list
+            .container
+                .news__wrapper
+                    a(href="#").news
+                            .bg__border
+                                .bg__wrapper
+                                    img(src="assets/images/news/883a3059660045.5a2a33e031e52.jpg", alt="").bg
+                            .date 30.01.2019
+                            .news__title Открытая Бета продолжается
+                            .news__desc 
+                                |Cегодня на сервере зарегистрирован рекорд онлайна - 1061 человек.
+                                |Сервер работал стабильно                        
+                    a(href="#").news
+                        .bg__border
+                            .bg__wrapper
+                                img(src="assets/images/news/servers.jpg", alt="").bg
+                        .date 30.01.2019
+                        .news__title Обновлённый сервер
+                        .news__desc 
+                            |Буквально час назад у нас произошла неприятная ситуация:
+                            |из-за нагрузки в ~20 тысяч...   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, hic!
+                    a(href="#").news
+                            .bg__border
+                                .bg__wrapper
+                                    img(src="assets/images/news/883a3059660045.5a2a33e031e52.jpg", alt="").bg
+                            .date 30.01.2019
+                            .news__title Открытая Бета продолжается
+                            .news__desc 
+                                |Cегодня на сервере зарегистрирован рекорд онлайна - 1061 человек.
+                                |Сервер работал стабильно       
+                    a(href="#").news
+                            .bg__border
+                                .bg__wrapper
+                                    img(src="assets/images/news/883a3059660045.5a2a33e031e52.jpg", alt="").bg
+                            .date 30.01.2019
+                            .news__title Открытая Бета продолжается
+                            .news__desc 
+                                |Cегодня на сервере зарегистрирован рекорд онлайна - 1061 человек.
+                                |Сервер работал стабильно       
+                    a(href="#").news
+                            .bg__border
+                                .bg__wrapper
+                                    img(src="assets/images/news/883a3059660045.5a2a33e031e52.jpg", alt="").bg
+                            .date 30.01.2019
+                            .news__title Открытая Бета продолжается
+                            .news__desc 
+                                |Cегодня на сервере зарегистрирован рекорд онлайна - 1061 человек.
+                                |Сервер работал стабильно       
+                    a(href="#").news
+                            .bg__border
+                                .bg__wrapper
+                                    img(src="assets/images/news/883a3059660045.5a2a33e031e52.jpg", alt="").bg
+                            .date 30.01.2019
+                            .news__title Открытая Бета продолжается
+                            .news__desc 
+                                |Cегодня на сервере зарегистрирован рекорд онлайна - 1061 человек.
+                                |Сервер работал стабильно       
+                    a(href="#").news
+                            .bg__border
+                                .bg__wrapper
+                                    img(src="assets/images/news/883a3059660045.5a2a33e031e52.jpg", alt="").bg
+                            .date 30.01.2019
+                            .news__title Открытая Бета продолжается
+                            .news__desc 
+                                |Cегодня на сервере зарегистрирован рекорд онлайна - 1061 человек.
+                                |Сервер работал стабильно       
+                    a(href="#").news
+                            .bg__border
+                                .bg__wrapper
+                                    img(src="assets/images/news/883a3059660045.5a2a33e031e52.jpg", alt="").bg
+                            .date 30.01.2019
+                            .news__title Открытая Бета продолжается
+                            .news__desc 
+                                |Cегодня на сервере зарегистрирован рекорд онлайна - 1061 человек.
+                                |Сервер работал стабильно       
+
+        include pug/footer.pug
+        include pug/scripts.pug

@@ -1,21 +1,34 @@
-header.navbar
-    .container
-        .logo
-            img(src="assets/images/logo.png", alt="")
-        .menu
-            a(href="#").menu__link Главная
-            a(href="#").menu__link Новости
-            a(href="#").menu__link О проекте
-            a(href="#").menu__link Форум
-            a(href="#").menu__link Магазин
-            a(href="#").menu__link Начать играть
-        .soc__wrapper
-            a(href="#").soc__link
-                img(src="assets/images/icons/vk.png", alt="")
-            a(href="#").soc__link
-                img(src="assets/images/icons/youtube.png", alt="")
-        button.btn__menu
-            span
-    .bg__clouds.main
-    .bg__clouds.second
-
+mixin Navbar(clouds, className='')
+    header.navbar(class=className)
+        .container
+            .logo
+                -if (className === 'white')
+                    img(src="assets/images/logo_white.png", alt="")
+                -else
+                    img(src="assets/images/logo.png", alt="")
+            .menu
+                a(href="#").menu__link Главная
+                a(href="news.html").menu__link Новости
+                a(href="#").menu__link О проекте
+                a(href="#").menu__link Форум
+                a(href="#").menu__link Магазин
+                a(href="#").menu__link Начать играть
+            .soc__wrapper
+                a(href="#").soc__link
+                    -if (className === 'white')
+                        img(src="assets/images/icons/vk_white.png", alt="")
+                    -else
+                        img(src="assets/images/icons/vk.png", alt="")
+                a(href="#").soc__link
+                    -if (className === 'white')
+                        img(src="assets/images/icons/youtube_white.png", alt="")
+                    -else
+                        img(src="assets/images/icons/youtube.png", alt="")
+            button.btn__menu
+                span
+        
+    -if (clouds)
+        .bg__clouds.main
+        .bg__clouds.second
+    -else
+        - return
