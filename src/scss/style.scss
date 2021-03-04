@@ -93,6 +93,16 @@ section
     {
         background-color: #fff;
     }
+
+    .btn__menu:before, .btn__menu:after, .btn__menu span
+    {
+        background-color: #fff;
+    }
+
+    .btn__menu.active:before, .btn__menu.active:after, .btn__menu.active span
+    {
+        background-color: #000;
+    }
 }
 
 .navbar, footer
