@@ -214,7 +214,21 @@
             padding-bottom: 20px;
         }
     }
-   
+    section.news__page .container
+    {
+        flex-direction: column;
+
+        .col__news
+        {
+            width: 400px;
+            margin: auto;
+        }
+
+        .cke__wrapper
+        {
+            padding-right: 0;
+        }
+    }
 }
 
 @media(max-width: 768px)
@@ -383,5 +397,19 @@
     section.news.list .news__wrapper
     {
         grid-template-columns: 100%;
+    }
+
+    section.news__page .container
+    {
+        .col__news
+        {
+            width: 100%;
+            margin: auto;
+        }
+    }
+
+    section.pagetitle h1
+    {
+        font-size: 28px;
     }
 }
